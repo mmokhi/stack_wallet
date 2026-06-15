@@ -312,6 +312,34 @@ dependency_overrides:
       url: https://github.com/cypherstack/logger
       ref: 3c0cba27868ebb5c7d65ebc30a8e6e5342186692
 
+  # ⚠️ FORK-ONLY — DROP from any upstream PR. Resolves the (not-yet-published)
+  # cs_nerva tree from git until it's on pub.dev (then this block is deleted
+  # and the %%ENABLE_XNV%% `cs_nerva: ^1.0.0` resolves from pub.dev). Must live
+  # here (not pubspec_overrides.yaml, which REPLACES these overrides and breaks
+  # logger/coinlib/etc.). Branch ref tracks the tip; pin a sha for a release.
+  cs_nerva:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva}
+  cs_nerva_flutter_libs:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs}
+  cs_nerva_flutter_libs_platform_interface:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_platform_interface}
+  cs_nerva_flutter_libs_android:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_android}
+  cs_nerva_flutter_libs_android_arm64_v8a:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_android_arm64_v8a}
+  cs_nerva_flutter_libs_android_armeabi_v7a:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_android_armeabi_v7a}
+  cs_nerva_flutter_libs_android_x86_64:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_android_x86_64}
+  cs_nerva_flutter_libs_ios:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_ios}
+  cs_nerva_flutter_libs_linux:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_linux}
+  cs_nerva_flutter_libs_macos:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_macos}
+  cs_nerva_flutter_libs_windows:
+    git: {url: https://github.com/mmokhi/cs_nerva, ref: nerva, path: cs_nerva_flutter_libs_windows}
+
   # required to make devicelocale work
   web: ^0.5.0
 
