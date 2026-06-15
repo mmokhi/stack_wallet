@@ -672,8 +672,6 @@ abstract class LibNervaWallet<T extends CryptonoteCurrency>
           ).toJsonString(),
           TxV2OdKeys.moneroAccountIndex: tx.accountIndex,
           TxV2OdKeys.isMoneroTransaction: true,
-          TxV2OdKeys.nervaTypeInt: tx.nervaData?.type,
-          TxV2OdKeys.nervaTypeString: tx.nervaData?.typeDisplay,
         }),
       );
 
