@@ -178,8 +178,10 @@ class _RestoreWalletViewState extends ConsumerState<RestoreWalletView> {
   // TODO: check for wownero wordlist?
   bool _isValidMnemonicWord(String word) {
     // TODO: get the actual language
-    if (widget.coin is Monero || widget.coin is Salvium) {
-      // Salvium use's Monero's wordlists.
+    if (widget.coin is Monero ||
+        widget.coin is Salvium ||
+        widget.coin is Nerva) {
+      // Salvium and Nerva use Monero's wordlists.
       switch (widget.seedWordsLength) {
         case 25:
           return csMonero.getMoneroWordList("English").contains(word);
@@ -272,6 +274,7 @@ class _RestoreWalletViewState extends ConsumerState<RestoreWalletView> {
           !(widget.coin is Monero ||
               widget.coin is Wownero ||
               widget.coin is Salvium ||
+              widget.coin is Nerva ||
               widget.coin is Xelis)) {
         unawaited(
           showFloatingFlushBar(

@@ -75,6 +75,10 @@ void main() {
     );
     expect(
       prices,
+      contains("Instance of 'Nerva': (change24h: 0.0, value: 0)"),
+    );
+    expect(
+      prices,
       contains("Instance of 'Solana': (change24h: 0.0, value: 0)"),
     );
     expect(prices, isNot('{}'));

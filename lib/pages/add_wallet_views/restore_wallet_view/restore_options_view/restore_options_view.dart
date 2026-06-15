@@ -41,6 +41,7 @@ import '../../../../widgets/stack_text_field.dart';
 import '../../../../widgets/textfield_icon_button.dart';
 import '../../../../widgets/toggle.dart';
 import '../../../../wl_gen/interfaces/cs_monero_interface.dart';
+import '../../../../wl_gen/interfaces/cs_nerva_interface.dart';
 import '../../../../wl_gen/interfaces/cs_salvium_interface.dart';
 import '../../../../wl_gen/interfaces/cs_wownero_interface.dart';
 import '../../create_or_restore_wallet_view/sub_widgets/coin_image.dart';
@@ -218,6 +219,9 @@ class _RestoreOptionsViewState extends ConsumerState<RestoreOptionsView> {
         }
         if (widget.coin is Wownero) {
           height = csWownero.getHeightByDate(date);
+        }
+        if (widget.coin is Nerva) {
+          height = csNerva.getHeightByDate(date);
         }
         if (widget.coin is Salvium) {
           height = csSalvium.getHeightByDate(

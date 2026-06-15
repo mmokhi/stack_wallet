@@ -27,6 +27,7 @@ dart "${APP_PROJECT_ROOT_DIR}/tool/process_pubspec_deps.dart" \
       XMR \
       WOW \
       SAL \
+      XNV \
       TOR \
       EPIC \
       FIRO \
@@ -41,6 +42,7 @@ dart "${APP_PROJECT_ROOT_DIR}/tool/gen_interfaces.dart" \
       XMR \
       WOW \
       SAL \
+      XNV \
       TOR \
       EPIC \
       FIRO \
@@ -114,6 +116,7 @@ final List<CryptoCurrency> _supportedCoins = List.unmodifiable([
   if (!Platform.isMacOS) Mimblewimblecoin(CryptoCurrencyNetwork.main),
   Nano(CryptoCurrencyNetwork.main),
   Namecoin(CryptoCurrencyNetwork.main),
+  Nerva(CryptoCurrencyNetwork.main),
   Particl(CryptoCurrencyNetwork.main),
   Peercoin(CryptoCurrencyNetwork.main),
   Salvium(CryptoCurrencyNetwork.main),

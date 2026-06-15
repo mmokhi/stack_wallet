@@ -37,6 +37,7 @@ import '../../../../wallets/crypto_currency/coins/epiccash.dart';
 import '../../../../wallets/crypto_currency/coins/litecoin.dart';
 import '../../../../wallets/crypto_currency/coins/mimblewimblecoin.dart';
 import '../../../../wallets/crypto_currency/coins/monero.dart';
+import '../../../../wallets/crypto_currency/coins/nerva.dart';
 import '../../../../wallets/crypto_currency/coins/salvium.dart';
 import '../../../../wallets/crypto_currency/coins/wownero.dart';
 import '../../../../wallets/crypto_currency/intermediate/cryptonote_currency.dart';
@@ -279,6 +280,7 @@ class _WalletNetworkSettingsViewState
         coin is Wownero ||
         coin is Epiccash ||
         coin is Salvium ||
+        coin is Nerva ||
         coin is Mimblewimblecoin ||
         (coin is Litecoin &&
             ref.read(pWalletInfo(widget.walletId)).isMwebEnabled)) {
@@ -646,6 +648,7 @@ class _WalletNetworkSettingsViewState
                                     coin is Wownero ||
                                     coin is Epiccash ||
                                     coin is Salvium ||
+                                    coin is Nerva ||
                                     coin is Mimblewimblecoin ||
                                     (coin is Litecoin &&
                                         ref.watch(

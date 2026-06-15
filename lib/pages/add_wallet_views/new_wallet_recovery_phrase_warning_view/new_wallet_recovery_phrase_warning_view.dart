@@ -183,7 +183,8 @@ class _NewWalletRecoveryPhraseWarningViewState
       if (coin is Monero ||
           coin is Wownero ||
           coin is Xelis ||
-          coin is Salvium) {
+          coin is Salvium ||
+          coin is Nerva) {
         // currently a special case due to the
         // xmr/wow libraries handling their
         // own mnemonic generation

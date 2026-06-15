@@ -43,6 +43,7 @@ import 'impl/mimblewimblecoin_wallet.dart';
 import 'impl/monero_wallet.dart';
 import 'impl/namecoin_wallet.dart';
 import 'impl/nano_wallet.dart';
+import 'impl/nerva_wallet.dart';
 import 'impl/particl_wallet.dart';
 import 'impl/peercoin_wallet.dart';
 import 'impl/salvium_wallet.dart';
@@ -401,6 +402,9 @@ abstract class Wallet<T extends CryptoCurrency> {
 
       case const (Nano):
         return NanoWallet(net);
+
+      case const (Nerva):
+        return NervaWallet(net);
 
       case const (Particl):
         return ParticlWallet(net);

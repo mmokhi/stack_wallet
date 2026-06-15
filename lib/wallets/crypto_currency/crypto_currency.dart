@@ -19,6 +19,7 @@ export 'coins/litecoin.dart';
 export 'coins/monero.dart';
 export 'coins/namecoin.dart';
 export 'coins/nano.dart';
+export 'coins/nerva.dart';
 export 'coins/particl.dart';
 export 'coins/peercoin.dart';
 export 'coins/salvium.dart';

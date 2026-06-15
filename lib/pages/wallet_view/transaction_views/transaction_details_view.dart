@@ -618,7 +618,7 @@ class _TransactionDetailsViewState
                                   ],
                                 ),
                               ),
-                              if (!((coin is Monero || coin is Wownero) &&
+                              if (!((coin is Monero || coin is Wownero || coin is Nerva) &&
                                       _transaction.type ==
                                           TransactionType.outgoing) &&
                                   !((coin is Firo) &&
@@ -627,7 +627,7 @@ class _TransactionDetailsViewState
                                 isDesktop
                                     ? const _Divider()
                                     : const SizedBox(height: 12),
-                              if (!((coin is Monero || coin is Wownero) &&
+                              if (!((coin is Monero || coin is Wownero || coin is Nerva) &&
                                       _transaction.type ==
                                           TransactionType.outgoing) &&
                                   !((coin is Firo) &&

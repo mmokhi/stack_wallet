@@ -28,6 +28,7 @@ import '../wallets/isar/models/wallet_info.dart';
 import '../wallets/wallet/impl/epiccash_wallet.dart';
 import '../wallets/wallet/impl/mimblewimblecoin_wallet.dart';
 import '../wallets/wallet/intermediate/cryptonote_wallet.dart';
+import '../wallets/wallet/intermediate/lib_nerva_wallet.dart';
 import '../wallets/wallet/intermediate/lib_salvium_wallet.dart';
 import '../wallets/wallet/wallet.dart';
 import 'event_bus/events/wallet_added_event.dart';
@@ -89,6 +90,17 @@ class Wallets {
       Logging.instance.d("Monero wallet: $walletId deleted");
     } else if (info.coin is Salvium) {
       final path = await salviumWalletDir(
+        walletId: walletId,
+        appRoot: await StackFileSystem.applicationRootDirectory(),
+      );
+      final file = Directory(path);
+      final isExist = file.existsSync();
+
+      if (isExist) {
+        await file.delete(recursive: true);
+      }
+    } else if (info.coin is Nerva) {
+      final path = await nervaWalletDir(
         walletId: walletId,
         appRoot: await StackFileSystem.applicationRootDirectory(),
       );

@@ -48,6 +48,7 @@ import '../../../widgets/desktop/desktop_app_bar.dart';
 import '../../../widgets/desktop/desktop_scaffold.dart';
 import '../../../widgets/stack_dialog.dart';
 import '../../../wl_gen/interfaces/cs_monero_interface.dart';
+import '../../../wl_gen/interfaces/cs_nerva_interface.dart';
 import '../../../wl_gen/interfaces/cs_salvium_interface.dart';
 import '../../../wl_gen/interfaces/cs_wownero_interface.dart';
 import '../../home_view/home_view.dart';
@@ -123,6 +124,11 @@ class _VerifyRecoveryPhraseViewState
       }
       if (widget.wallet.cryptoCurrency is Wownero) {
         height = csWownero.getHeightByDate(
+          DateTime.now().subtract(const Duration(days: 7)),
+        );
+      }
+      if (widget.wallet.cryptoCurrency is Nerva) {
+        height = csNerva.getHeightByDate(
           DateTime.now().subtract(const Duration(days: 7)),
         );
       }
